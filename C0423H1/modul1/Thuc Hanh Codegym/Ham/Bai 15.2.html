@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chuyen Doi feet meter</title>
+</head>
+<body>
+</body>
+</html>
+<script>
+
+  let feet= parseInt(prompt("Nhap Feet"));
+  document.write(feet+" feet"+" = "+feetToMeter(feet)+"meter");
+  document.write("<br>");
+  let meter= parseInt(prompt("Nhap meter"));
+  document.write(meter+" meter"+" = "+meterToFeet(meter)+"feet");
+  function feetToMeter(feet){
+    let meter = feet*0.305;
+    return meter;
+  }
+  feetToMeter(feet);
+  function meterToFeet(meter){
+    let feet = meter*3.279;
+    return feet;
+  }
+</script>

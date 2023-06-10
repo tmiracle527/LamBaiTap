@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Quan Ly Hoc Sinh</title>
+    <link href="Quản%20Lý%20Học%20Sinh.css">
+</head>
+<body>
+<img src="" style="width: 100%; width: 100%;"/>
+<h1> Quản Lý Học Viên</h1>
+<div class="form-input">
+    <h3> Thông Tin Học Viên</h3>
+    <label>Ảnh Học Viên:
+        <input type="text" id="photo">
+    </label>
+    <br>
+
+    <label>Họ Và Tên:
+        <input type="text" id="name">
+    </label>
+    <br>
+
+    <label>Mã HV:
+        <input type="text" id="id">
+    </label>
+    <br>
+
+    <label>Ngày Sinh:
+        <input type="text" id="birth">
+    </label>
+    <br>
+
+    <label>Lớp: </label>
+    <input type="text" id="grade">
+    </label>
+    <br>
+
+    <label>Giới Tính:
+        <input type="radio" name="gender" id="male"> Nam
+        <input type="radio" name="gender" id="female"> Nữ
+    </label>
+    <br>
+
+    <button onclick="save()" style="background-color: forestgreen">Save</button>
+</div>
+
+<div class="list_student">
+    <h3> Danh Sách Học Viên</h3>
+    <table width="700" border="1" cellpadding="0" cellpadding="0">
+        <tr>
+            <td>STT</td>
+            <td>Ảnh Học Viên</td>
+            <td>Họ và Tên</td>
+            <td>Mã HV</td>
+            <td>Ngày Sinh</td>
+            <td>Lớp</td>
+            <td>Giới Tính</td>
+        </tr>
+    </table>
+</div>
+</body>
+</html>
+<script>
+    let show = [];
+
+    function save() {
+        let anh = document.getElementById('photo').value;
+        let hoten = document.getElementById('name').value;
+        let mahv = document.getElementById('id').value;
+        let ngaysinh = document.getElementById('birth').value;
+        let lop = document.getElementById('grade').value;
+        let gioitinh = '';
+        if (document.getElementById('male')) {
+            gioitinh = document.getElementById('male').value;
+        } else if (gioitinh = document.getElementById('female')) ;
+        {
+            gioitinh = document.getElementById('female').value;
+        }
+    }
+
+    class Form {
+        photo;
+        name;
+        id;
+        birth;
+        grade;
+        gender;
+
+        constructor(photo, name, id, birth, grade, gender) {
+            this.photo = photo;
+            this.name = name;
+            this.id = id
+            this.birth = birth
+            this.grade = grade;
+            this.gender = gender;
+        }
+
+        getPhoto() {
+            return this.photo;
+        }
+
+        getName() {
+            return this.name;
+        }
+
+        getId() {
+            return this.id
+        }
+
+        getBirth() {
+            return this.birth;
+        }
+
+        getGrade() {
+            return this.grade;
+        }
+
+        getGender() {
+            return this.gender
+        }
+
+        setPhoto(newPhoto) {
+            this.photo = newPhoto;
+        }
+
+        setName(newName) {
+            this.name = newName;
+        }
+
+        setBirth(newBirth) {
+            this.birth = newBirth;
+        }
+
+        setGrade(newGrade) {
+            this.grade = newGrade;
+        }
+
+        setGender(newGender) {
+            this.gender = newGender;
+        }
+
+    }
+
+</script>

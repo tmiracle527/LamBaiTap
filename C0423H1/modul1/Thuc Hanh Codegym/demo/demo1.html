@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>demo1</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+  let arr= ["tao","le","tao","mit","xoai"];
+  let arr2=[];
+  for (let i=0;i<arr.length;i++){
+    if (arr2.indexOf(arr[i])===-1){
+      arr2.push(arr[i]);
+    }
+  }//document.write(arr2);
+
+  let thongke= [];
+  for (let j=0;j<arr2.length;j++){
+    let count=0;
+    for (let i=0; i<arr.length;i++){
+      if (arr[i]=== arr2[j])
+            count++;
+    }
+    thongke.push(count)
+  }//document.write(thongke);
+let max=thongke[0];
+let index=0;
+for (let i=1;i<thongke.length;i++){
+  if (max<thongke[i]) {
+  max= thongke[i];
+    index=i;
+  }
+}document.write(arr2[index])
+</script>

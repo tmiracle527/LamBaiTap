@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="f40df400-73c2-4e8c-9d59-84d445c0e4a9" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Bai Thi/bai1.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Bai Thi/bai2.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Bai Thi/bai3.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Bai Thi/bai4.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Kiem Tra/Tao Bang.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Case/Case Study.html" beforeDir="false" afterPath="$PROJECT_DIR$/Case/Case Study.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Case/CaseStudy.css" beforeDir="false" afterPath="$PROJECT_DIR$/Case/CaseStudy.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/demo3.html" beforeDir="false" afterPath="$PROJECT_DIR$/demo/demo3.html" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+        <option value="CSS File" />
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectId" id="2PqxpHVGiBzr4R2MYX7qvlFiCKq" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "master",
+    "last_opened_file_path": "C:/Users/admin/Desktop/C0423H1/Thuc Hanh Codegym",
+    "list.type.of.created.stylesheet": "CSS",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "vcs.Git",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="f40df400-73c2-4e8c-9d59-84d445c0e4a9" name="Changes" comment="" />
+      <created>1684198593619</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1684198593619</updated>
+      <workItem from="1684198594635" duration="1835000" />
+      <workItem from="1684202798361" duration="5872000" />
+      <workItem from="1684285694371" duration="6269000" />
+      <workItem from="1684371838760" duration="13393000" />
+      <workItem from="1684460727169" duration="2707000" />
+      <workItem from="1684683951428" duration="3589000" />
+      <workItem from="1684739312038" duration="4990000" />
+      <workItem from="1684764828540" duration="5000" />
+      <workItem from="1684764843376" duration="29736000" />
+      <workItem from="1684978889126" duration="23273000" />
+      <workItem from="1685093700854" duration="1440000" />
+      <workItem from="1685159341580" duration="2875000" />
+      <workItem from="1685255671658" duration="16907000" />
+      <workItem from="1685321847463" duration="6723000" />
+      <workItem from="1685368602664" duration="12000" />
+      <workItem from="1685368838418" duration="1290000" />
+      <workItem from="1685409852839" duration="594000" />
+      <workItem from="1685428574779" duration="17500000" />
+      <workItem from="1685504136467" duration="36268000" />
+      <workItem from="1685668641276" duration="461000" />
+      <workItem from="1685669138686" duration="276000" />
+      <workItem from="1685670230107" duration="33000" />
+      <workItem from="1685672338025" duration="6377000" />
+      <workItem from="1685929365182" duration="41000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>

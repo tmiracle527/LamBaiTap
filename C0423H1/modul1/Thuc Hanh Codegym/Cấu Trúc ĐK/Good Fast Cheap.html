@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>good fast cheap</title>
+</head>
+<body>
+<div align="center">
+    <h1>Demo</h1>
+    <input type="range" min="0" max="1" id="ip1" onchange="change()" value="0"><br>
+    <input type="range" min="0" max="1" id="ip2" onchange="change()" value="0"><br>
+    <input type="range" min="0" max="1" id="ip3" onchange="change()" value="0"><br>
+</div>
+</body>
+</html>
+<script>
+    let ip1 = document.getElementById("ip1");
+    let ip2 = document.getElementById("ip2");
+    let ip3 = document.getElementById("ip3");
+
+    let count = 1;
+    function change() {
+        if (ip1.value == 0 && ip2.value == 0 && ip3.value == 0) {
+
+            if (count === 1) {
+                ip1.value = 0;
+                count++;
+            } else if (count === 2) {
+                ip2.value = 0;
+                count++;
+            } else if (count === 3) {
+                ip3.value = 0;
+                count = 1;
+            }
+        }
+    }
+
+</script>

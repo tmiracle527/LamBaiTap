@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+
+        function isPrime(x) {
+            if (x < 2) {
+                return false;
+            }
+            for (let i = 2; i <x ; i++) {
+                if (x % i == 0) {
+                    return false;
+                }
+            }
+            return true;
+        }
+        function sumOfListPrime(x) {
+        let sum = 0 ;
+        for (let j = 0; j <= x; j++) {
+            if (isPrime(j)) {
+                sum += j;
+            }
+        }
+      return sum;
+    }
+</script>
+</html>

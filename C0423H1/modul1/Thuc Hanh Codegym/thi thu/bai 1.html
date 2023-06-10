@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>sap xep diem thi</title>
+</head>
+<body>
+</body>
+</html>
+<script>
+
+    function loc(mang) {
+        for (let i = 0; i < mang.length; i++) {
+            for (let j = mang.length; j >= i; j--) {
+                if (mang[j] > mang[j - 1]) {
+                    let a = mang[j];
+                    mang[j] = mang[j - 1];
+                    mang[j - 1] = a;
+                }
+            }
+        }
+    }
+    let mang = [5, 2, 3, 6, 4, 1, 7, 8, 9, 10];
+    loc(mang)
+    alert("điểm cao thứ 3 là: " + mang[2])
+</script>

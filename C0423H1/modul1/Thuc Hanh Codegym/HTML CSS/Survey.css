@@ -1,0 +1,10 @@
+#TB3 td,#TB3 th{
+    border: 1px solid;
+}
+table{
+    border-collapse: collapse;
+}
+
+tr:nth-child(1){
+    background-color: #e6e6e6;
+}

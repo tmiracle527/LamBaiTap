@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>web ban hang</title>
+  <link rel="stylesheet" href="./case.css">
+</head>
+<body>
+<img src="https://cdn.honda.com.vn/motorbikes/May2023/ZS2xN2bzxpIRfcTn6A79.jpg" width="100%" height="300px">
+
+  <div id="loginForm" class="loginForm">
+    <h2>Đăng Nhập</h2>
+    <label for="user">Tên đăng nhập:</label>
+    <input type="text" id="user" name="user" placeholder="Tài Khoản"><br><br>
+
+    <label for="password">Mật khẩu:</label>
+    <input type="password" id="password" name="password" placeholder="Mật Khẩu"><br><br>
+
+    <div class="btn">
+      <button onclick="login()">Đăng nhập</button>
+    </div>
+  </div>
+
+
+<div id="adminform">
+</div>
+<div id="timKiem">
+
+</div>
+
+</body>
+</html>
+<script>
+  //  Tạo class
+  class motobike {
+    anh;
+    tenHang;
+    loaiXe;
+    mauXe
+    giaXe;
+
+    constructor(anh, tenHang, loaiXe, mauXe, giaXe) {
+      this.anh = anh;
+      this.tenHang = tenHang;
+      this.loaiXe = loaiXe;
+      this.mauXe = mauXe;
+      this.giaXe = giaXe;
+
+    }
+  }
+
+  //khai báo mảng
+  let sp1 = new motobike("https://cms-i.autodaily.vn/du-lieu/2019/03/07/yamaha-xsr-900-abs-2019-1.jpg", "Yamaha", "XSR 900", "Đen", 300);
+  let sp2 = new motobike("https://cdn.honda.com.vn/motorbike-versions/March2023/3yHA9YX7ojYvmCTUIt3L.jpg", "HonDa", "CBR 650R", "Đỏ", 250);
+  let sp3 = new motobike("https://cdn.honda.com.vn/motorbikes/August2022/UZRmrbvdNm1isCkzbd6E.png", "HonDa", "Wave Alpha 110", "Trắng", 17);
+  let array = [sp1, sp2, sp3];
+  let ind = 0;
+  let edit = 0;
+
+  // đăng nhập
+  function login() {
+    if (document.getElementById("user").value === "admin" && document.getElementById("password").value === "123"){
+      showMain()
+    } else {
+      alert("tài khoản hoặc mật khẩu không đúng");
+    }
+  }
+
+  // quay lại danh sách quản lý SP
+  function quayLai() {
+    showMain();
+    document.getElementById("timKiem").hidden = true;
+  }
+  // mở trang quản lý SP
+  function showMain() {
+    document.getElementById('loginForm').style.display = "none";
+    document.getElementById('adminform').innerHTML = `
+            <h1 style="text-align: center">Quản lý sản phẩm</h1>
+            <div class="productTable">
+                <table>
+                  <tr>
+                    <td><input type="text" id="anh" placeholder="Ảnh"></td>
+                    <td><button onclick="save()">Thêm</button></td>
+                  </tr>
+                  <tr>
+                    <td><input type="text" id="tenHang" placeholder="Tên Hãng"></td>
+                    <td><button onclick="search()">Search</button></td>
+                  </tr>
+                  <tr>
+                    <td><input type="text" id="loaiXe" placeholder="Loại Xe"></td>
+                  </tr>
+                  <tr>
+                    <td><input type="text" id="mauXe" placeholder="Màu Xe"></td>
+                  </tr>
+                  <tr>
+                    <td><input type="text" id="giaXe" placeholder="Giá"></td>
+                  </tr>
+                </table>
+            </div>
+        <div id="show"></div>
+        `
+    xemDanhSachSP(array);
+  }
+
+  // Xem danh sách sản phẩm
+  function xemDanhSachSP(array) {
+    let table = `<table class="listProduct">
+                    <tr class='Headers'>
+                    <th>STT</th>
+                    <th>Ảnh</th>
+                    <th>Tên hãng</th>
+                    <th>Loại xe</th>
+                    <th>Màu xe</th>
+                    <th>Giá</th>
+                    <th></th>
+                    <th></th>
+                    </tr> <br>
+                    `
+    for (let i = 0; i < array.length; i++) {
+      table += `<tr>
+                  <td>${i+1}</td>
+                  <td><img src= "${array[i].anh}" alt="Ảnh sản phẩm" width="150px" height="100px"></td>
+                  <td>${array[i].tenHang}</td>
+                  <td>${array[i].loaiXe}</td>
+                  <td>${array[i].mauXe}</td>
+                  <td>${array[i].giaXe}</td>
+                  <td><button class="editButton" onclick='sua(${i})'>Edit</button></td>
+                  <td><button class="deleteButton" onclick='xoa(${i})'>Delete</button>
+               </tr>
+                `
+    }
+    document.getElementById('show').innerHTML = table;
+  }
+
+  // xóa SP
+  function xoa(index) {
+    array.splice(index, 1);
+    xemDanhSachSP(array)
+  }
+
+  // Sửa TT
+  function sua(index) {
+    let anh = document.getElementById("anh");
+    let tenHang = document.getElementById("tenHang");
+    let loaiXe = document.getElementById("loaiXe");
+    let mauXe = document.getElementById("mauXe");
+    let giaXe = document.getElementById("giaXe");
+    anh.value = array[index].anh;
+    tenHang.value = array[index].tenHang;
+    loaiXe.value = array[index].loaiXe;
+    mauXe.value = array[index].mauXe;
+    giaXe.value = array[index].giaXe;
+    edit = 1;
+    ind = index;
+  }
+
+  // thêm/lưu SP
+  function save() {
+    if (edit == 1) {
+      array[ind].anh = document.getElementById('anh').value;
+      array[ind].tenHang = document.getElementById('tenHang').value;
+      array[ind].loaiXe = document.getElementById('loaiXe').value;
+      array[ind].mauXe = document.getElementById('mauXe').value;
+      array[ind].giaXe = document.getElementById('giaXe').value;
+      xemDanhSachSP(array)
+      anh.value = '';
+      tenHang.value = '';
+      loaiXe.value = '';
+      mauXe.value = '';
+      giaXe.value = '';
+      edit = 0;
+      ind = "";
+    } else {
+      let anh = document.getElementById("anh");
+      let tenHang = document.getElementById("tenHang");
+      let loaiXe = document.getElementById("loaiXe");
+      let mauXe = document.getElementById("mauXe");
+      let giaXe = document.getElementById("giaXe");
+      let count = 0;
+      for (let i = 0; i < array.length; i++) {
+        if (loaiXe.value == array[i].loaiXe && mauXe.value == array[i].mauXe) {
+          alert("Sản Phẩm Đã tồn Tại")
+          count++;
+        }
+      }
+      console.log(count)
+
+      if (count == 0) {
+        let a = new motobike(anh.value, tenHang.value, loaiXe.value, mauXe.value, giaXe.value)
+        array.push(a);
+        xemDanhSachSP(array)
+        anh.value = ''
+        tenHang.value = '';
+        loaiXe.value = '';
+        mauXe.value = '';
+        giaXe.value = '';
+      }
+    }
+  }
+  // Mở giao diện tìm kiếm
+  function search() {
+    document.getElementById("adminform").innerHTML = 'none';
+    document.getElementById('timKiem').innerHTML = `
+        <input type="text" id="thongTin" placeholder="Nhập thông tin tìm kiếm" >
+        <button onclick="timSanPham()">Xem Kết Quả</button>
+    <button onclick="quayLai()">Back</button>
+    <table id="show">
+
+        </table>
+        `
+    document.getElementById("timKiem").hidden = false;
+
+    xemDanhSachSP(array)
+  }
+  // tìm
+  function timSanPham() {
+    let tim = document.getElementById("thongTin").value;
+    document.getElementById('show').innerHTML = ""
+    let table = "<table border='1' width='300' cellspacing='0' cellpadding='3'>";
+    table = table + "<tr class='DoiMauChu'>";
+    table = table + "<td>STT</td>";
+    table = table + "<td>Ảnh</td>";
+    table = table + "<td>Hãng</td>";
+    table = table + "<td>Loại Xe</td>";
+    table = table + "<td>Mầu Xe</td>";
+    table = table + "<td>Giá Xe</td>";
+    table = table + "</tr> <br>";
+    for (let i = 0; i < array.length; i++) {
+      if (array[i].tenHang.includes(tim) || array[i].loaiXe.includes(tim)) {
+        table = table + "<tr>";
+        table = table + "<td>" + i + "</td>";
+        table = table + `<td> <img src= "${array[i].anh}" alt="Ảnh sản phẩm" width="150px" height="100px"> </td>`;
+        table = table + "<td>" + array[i].tenHang + "</td>";
+        table = table + "<td>" + array[i].loaiXe + "</td>";
+        table = table + "<td>" + array[i].mauXe + "</td>";
+        table = table + "<td>" + array[i].giaXe + "</td>";
+        table = table + "</tr>";
+      }
+      document.getElementById('show').innerHTML = table;
+    }
+  }
+</script>
