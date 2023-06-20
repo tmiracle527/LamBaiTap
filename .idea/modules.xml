@@ -3,8 +3,13 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/C0423H1/Bai Tap/Bai Tap.iml" filepath="$PROJECT_DIR$/C0423H1/Bai Tap/Bai Tap.iml" />
+      <module fileurl="file://$PROJECT_DIR$/BaiTap20.06/BaiTap20.06.iml" filepath="$PROJECT_DIR$/BaiTap20.06/BaiTap20.06.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/CodeGym.iml" filepath="$PROJECT_DIR$/.idea/CodeGym.iml" />
       <module fileurl="file://$PROJECT_DIR$/Modul1/Modul1.iml" filepath="$PROJECT_DIR$/Modul1/Modul1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/QuanLyCanBo/QuanLyCanBo.iml" filepath="$PROJECT_DIR$/QuanLyCanBo/QuanLyCanBo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/QuanLySach/QuanLySach.iml" filepath="$PROJECT_DIR$/QuanLySach/QuanLySach.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Test/Test.iml" filepath="$PROJECT_DIR$/Test/Test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/TuyenSinh/TuyenSinh.iml" filepath="$PROJECT_DIR$/TuyenSinh/TuyenSinh.iml" />
       <module fileurl="file://$PROJECT_DIR$/C0423H1/modul2/modul2.iml" filepath="$PROJECT_DIR$/C0423H1/modul2/modul2.iml" />
       <module fileurl="file://$PROJECT_DIR$/C0423H1/untitled/untitled.iml" filepath="$PROJECT_DIR$/C0423H1/untitled/untitled.iml" />
     </modules>
